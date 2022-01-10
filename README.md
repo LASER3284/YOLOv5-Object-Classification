@@ -59,6 +59,7 @@ python3 train.py --img 640 --batch -1 --epochs (number of training runthroughs) 
 - The yolov5s.pt file is a base weights file that the program will build onto, this will be auto downloaded if you don't have it.
 
 While training you can look at the P, R, mAP@.5, and mAP@.5:.95 numbers to get an idea of how well your model is training. They should slowly increase to 1.00 if your model is doing well.
+![Example terminal output](https://github.com/LASER3284/YOLOv5-Object-Classification/blob/main/video%20splitter/Images/terminal.png)
 
 ## Running a Test Detection on Your YOLOv5 Model
 Now, we can test the model by using the detect program. The training program stores the model in the ```runs/train/exp0-9/weights/``` as a ```best.pt``` file.
@@ -66,12 +67,13 @@ Run the detection program with the command:
 ```
 python3 detect.py --weights runs/train/exp/weights/best.pt --img-size 640 --source (path to image or video files to run detection on)
 ```
-![Example terminal output](https://github.com/LASER3284/YOLOv5-Object-Classification/blob/main/video%20splitter/Images/terminal.png)
+![Example of detection](https://github.com/LASER3284/YOLOv5-Object-Classification/blob/main/video%20splitter/Images/demo.png)
+
 After the program is done it will store the resulting images or video file in the ```runs/detect/``` directory.
 
 ## 5 Deploy Trained Model in Something Cool
 Now, it's up to you to run the best.pt model on something cool like a raspberry pi to detect objects. You can use this tutorial to setup the pip environment on anything else and modify the detect.py from the yolov5 folder to do the detection.
-![Example of detection](https://github.com/LASER3284/YOLOv5-Object-Classification/blob/main/video%20splitter/Images/demo.png)
+
 
 ### More Tutorials and Helpful Links
 https://github.com/LASER3284/YOLOv5-Object-Classification/tree/main/yolov5
