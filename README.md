@@ -25,6 +25,8 @@ In order to train a YOLO neural network, you first need to gather data about the
    - LabelMe
    - CVAT
 The annotation process consists of going through each image and drawing a bounding box of the object you want to detect and giving that bounding box a label consistant and relating to the object. **Once your annotation is done, resize your data to 640x640 and export it in YOLOv5 or any compatible YOLO format.**
+
+**I have compiled and annotated some images for the FRC 2022 game, they can be found [here](https://drive.google.com/drive/folders/1jMB4qO-iwuESWnIYX0BQRPlOYbCC2tI7?usp=sharing)**
 ### Example
   Annotation:
   ![Example of annotating an image with RoboFlow](https://miro.medium.com/max/1400/0*wApVYCGhdmAXSjuo)
@@ -62,10 +64,12 @@ Run the detection program with the command:
 ```
 python3 detect.py --weights runs/train/exp/weights/best.pt --img-size 640 --source (path to image or video files to run detection on)
 ```
+![Example terminal output](https://github.com/LASER3284/YOLOv5-Object-Classification/blob/main/video%20splitter/Images/terminal.png)
 After the program is done it will store the resulting images or video file in the ```runs/detect/``` directory.
 
 ## 5 Deploy Trained Model in Something Cool
 Now, it's up to you to run the best.pt model on something cool like a raspberry pi to detect objects. You can use this tutorial to setup the pip environment on anything else and modify the detect.py from the yolov5 folder to do the detection.
+![Example of detection](https://github.com/LASER3284/YOLOv5-Object-Classification/blob/main/video%20splitter/Images/demo.png)
 
 ### More Tutorials and Helpful Links
 https://github.com/LASER3284/YOLOv5-Object-Classification/tree/main/yolov5
