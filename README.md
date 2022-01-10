@@ -24,6 +24,7 @@ In order to train a YOLO neural network, you first need to gather data about the
    - Labelimg
    - LabelMe
    - CVAT
+
 The annotation process consists of going through each image and drawing a bounding box of the object you want to detect and giving that bounding box a label consistant and relating to the object. **Once your annotation is done, resize your data to 640x640 and export it in YOLOv5 or any compatible YOLO format.**
 
 **I have compiled and annotated some images for the FRC 2022 game, they can be found [here](https://drive.google.com/drive/folders/1jMB4qO-iwuESWnIYX0BQRPlOYbCC2tI7?usp=sharing)**
@@ -50,12 +51,13 @@ names: ['OBJECT0', 'OBJECT1', 'OBJECT2', 'OBJECT3', 'OBJECT4']
 
 ## 4 Training Your Convolutional Neural Network
 Finally, we made it past the difficult and tedious part of YOLO. Next, we will actually begin building a neural network from our data. All we have to do is run one command: (make sure you have entered your pip environment or you'll get dependency errors)
-    ```
-    python3 train.py --img 640 --batch -1 --epochs (number of training runthroughs) --data ../datasets/(yaml name).yaml --weights yolov5s.pt
-    ```
+```
+python3 train.py --img 640 --batch -1 --epochs (number of training runthroughs) --data ../datasets/(yaml name).yaml --weights yolov5s.pt
+```
 - The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters. By setting this number to -1, the computer will autodetermine this for us.
-- The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset. If you are getting poor results and you have a good dataset, try increasing this number.
+- The number of epochs is a hyperparameter that defines the number of times that the learning algorithm will work through the entire training dataset. If you are getting poor results and you have a good dataset, try increasing this number.
 - The yolov5s.pt file is a base weights file that the program will build onto, this will be auto downloaded if you don't have it.
+
 While training you can look at the P, R, mAP@.5, and mAP@.5:.95 numbers to get an idea of how well your model is training. They should slowly increase to 1.00 if your model is doing well.
 
 ## Running a Test Detection on Your YOLOv5 Model
