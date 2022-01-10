@@ -1,0 +1,6 @@
+path: ../datasets/coco128  # dataset root dir
+train: images  # train images (relative to 'path')
+val: images
+
+nc: 5
+names: ['OBJECT0', 'OBJECT1', 'OBJECT2', 'OBJECT3', 'OBJECT4']
