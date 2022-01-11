@@ -11,6 +11,7 @@ After cloning this repo and navigating into its directory, [install python](http
 pipenv install
 ```
 **This command will install all the packages from the pipfile and will take A LONG TIME. Be patient, the terminal will print out success when finished.**
+If you're on windows some of the dependencies may fail to install. You will have to troubleshoot them manually.
 
 Then, enter your environment by typing:
 ```
